@@ -1,0 +1,6 @@
+site/softleo/services/LocacaoService.class
+site/softleo/domains/Filme.class
+site/softleo/domains/Locacao.class
+site/softleo/domains/Usuario.class
+site/softleo/utils/DataUtils.class
+site/softleo/services/Calculadora.class
