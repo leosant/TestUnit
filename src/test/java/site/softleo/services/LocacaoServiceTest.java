@@ -1,16 +1,13 @@
 package site.softleo.services;
 
+import org.junit.*;
+import org.junit.rules.ErrorCollector;
+import org.junit.rules.ExpectedException;
+import org.junit.runners.MethodSorters;
 import site.softleo.domains.Filme;
 import site.softleo.domains.Locacao;
 import site.softleo.domains.Usuario;
 import site.softleo.utils.DataUtils;
-import org.junit.Before;
-import org.junit.FixMethodOrder;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ErrorCollector;
-import org.junit.rules.ExpectedException;
-import org.junit.runners.MethodSorters;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -38,8 +35,85 @@ public class LocacaoServiceTest {
         filmes = new ArrayList<>();
     }
 
+    //Caso o usuário queira compra até tres filmes deve ocorrer um desconto de 25%
     @Test
-    public void testeLocacao() throws Exception {
+    public void shouldDescontoTresFilmes() throws Exception {
+        //Cenario
+        Usuario user = new Usuario("Usuario 1");
+        filmes.add(new Filme(" Filme 1", 2, 4.0));
+        filmes.add(new Filme(" Filme 2", 3, 4.0));
+        filmes.add(new Filme(" Filme 3", 4, 4.0));
+        Locacao locacao = locacaoService.alugarFilme(user, filmes);
+
+        //Acao
+        locacaoService.descontoConjuntosFilmes(locacao);
+
+        //Verificacao
+        Assert.assertEquals(11.0, locacao.getValor(), 0.001);
+    }
+
+    //Caso o usuário queira compra até quatro filmes deve ocorrer um desconto de 50%
+    @Test
+    public void shouldDescontoQuatroFilmes() throws Exception {
+        //Cenario
+        Usuario user = new Usuario("Usuario 1");
+        filmes.add(new Filme(" Filme 1", 2, 4.0));
+        filmes.add(new Filme(" Filme 2", 3, 4.0));
+        filmes.add(new Filme(" Filme 3", 4, 4.0));
+        filmes.add(new Filme(" Filme 4", 1, 4.0));
+
+        Locacao locacao = locacaoService.alugarFilme(user, filmes);
+
+        //Acao
+        locacaoService.descontoConjuntosFilmes(locacao);
+
+        //Verificacao
+        Assert.assertEquals(13.0, locacao.getValor(), 0.001);
+    }
+
+    //Caso o usuário queira compra até cinco filmes deve ocorrer um desconto de 75%
+    @Test
+    public void shouldDescontoCincoFilmes() throws Exception {
+        //Cenario
+        Usuario user = new Usuario("Usuario 1");
+        filmes.add(new Filme(" Filme 1", 2, 4.0));
+        filmes.add(new Filme(" Filme 2", 3, 4.0));
+        filmes.add(new Filme(" Filme 3", 4, 4.0));
+        filmes.add(new Filme(" Filme 4", 1, 4.0));
+        filmes.add(new Filme(" Filme 5", 8, 4.0));
+
+        Locacao locacao = locacaoService.alugarFilme(user, filmes);
+
+        //Acao
+        locacaoService.descontoConjuntosFilmes(locacao);
+
+        //Verificacao
+        Assert.assertEquals(14, locacao.getValor(), 0.001);
+    }
+    //Caso o usuário queira compra até seis filmes deve ocorrer um desconto de 100%
+    @Test
+    public void shouldDescontoSeisFilmes() throws Exception {
+        //Cenario
+        Usuario user = new Usuario("Usuario 1");
+        filmes.add(new Filme(" Filme 1", 2, 4.0));
+        filmes.add(new Filme(" Filme 2", 3, 4.0));
+        filmes.add(new Filme(" Filme 3", 4, 4.0));
+        filmes.add(new Filme(" Filme 4", 1, 4.0));
+        filmes.add(new Filme(" Filme 5", 8, 4.0));
+        filmes.add(new Filme(" Filme 6", 5, 4.0));
+
+        Locacao locacao = locacaoService.alugarFilme(user, filmes);
+
+        //Acao
+        locacaoService.descontoConjuntosFilmes(locacao);
+
+        //Verificacao
+        Assert.assertEquals(14.0, locacao.getValor(), 0.001);
+    }
+
+
+    @Test
+    public void shouldAlugarFilme() throws Exception {
 
         Usuario user = new Usuario("Usuario 1");
         filmes.add(new Filme(" Filme 1", 2, 5.0));
@@ -56,7 +130,7 @@ public class LocacaoServiceTest {
     }
 
     @Test(expected = Exception.class)
-    public void testeLocacao_filmeEstoque() throws Exception {
+    public void shouldExpectedExceptionFilmeSemEstoque() throws Exception {
 
         Usuario user = new Usuario("Usuario 1");
         filmes.add(new Filme(" Filme 1", 0, 5.0));
@@ -66,7 +140,7 @@ public class LocacaoServiceTest {
     }
 
     @Test
-    public void testeLocacao_filmeEstoque2() {
+    public void shouldBlockCodeFilmeSemEstoque() {
 
         //A melhor é essa
 

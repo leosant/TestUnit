@@ -3,8 +3,10 @@ package site.softleo.services;
 import site.softleo.domains.Filme;
 import site.softleo.domains.Locacao;
 import site.softleo.domains.Usuario;
+import site.softleo.enums.PercentualDesconto;
 import site.softleo.utils.DataUtils;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -48,5 +50,19 @@ public class LocacaoService {
 		//Salvando a locacao...
 		
 		return locacao;
+	}
+
+	//TODO: refatorar pensando no SOLID
+	public void descontoConjuntosFilmes(Locacao locacao) {
+
+		BigDecimal valorUltimoFilmeDesconto;
+
+		for (int i = 0; locacao.getFilmes().size() > i; i++) {
+
+			double precoLoc = locacao.getFilmes().get(i).getPrecoLocacao();
+			valorUltimoFilmeDesconto = BigDecimal.valueOf(precoLoc - (precoLoc * PercentualDesconto.calculaPercentualDesconto(i+1)));
+			locacao.setValorTotal((locacao.getValor() - precoLoc)+valorUltimoFilmeDesconto.doubleValue());
+
+		}
 	}
 }
