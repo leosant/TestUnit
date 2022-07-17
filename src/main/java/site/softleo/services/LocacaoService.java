@@ -32,15 +32,13 @@ public class LocacaoService {
 			throw new Exception(erros.toString());
 		}
 
-		Double totalPreco = filmes.stream()
-				.mapToDouble(Filme::getPrecoLocacao)
-				.sum();
+		double precoTotal = descontosFilmes(filmes);
 
 		Locacao locacao = new Locacao();
 		locacao.setFilmes(filmes);
 		locacao.setUsuario(usuario);
 		locacao.setDataLocacao(new Date());
-		locacao.setValorTotal(totalPreco);
+		locacao.setValorTotal(precoTotal);
 
 		//Entrega no dia seguinte
 		Date dataEntrega = new Date();
@@ -52,17 +50,31 @@ public class LocacaoService {
 		return locacao;
 	}
 
-	//TODO: refatorar pensando no SOLID
-	public void descontoConjuntosFilmes(Locacao locacao) {
+	public Double descontosFilmes(List<Filme> filmes) {
 
-		BigDecimal valorUltimoFilmeDesconto;
+		double valorFilmeComDesconto = 0.0;
 
-		for (int i = 0; locacao.getFilmes().size() > i; i++) {
+		for (int i = 0; filmes.size() > i; i++) {
 
-			double precoLoc = locacao.getFilmes().get(i).getPrecoLocacao();
-			valorUltimoFilmeDesconto = BigDecimal.valueOf(precoLoc - (precoLoc * PercentualDesconto.calculaPercentualDesconto(i+1)));
-			locacao.setValorTotal((locacao.getValor() - precoLoc)+valorUltimoFilmeDesconto.doubleValue());
+			BigDecimal precoLoc = BigDecimal.valueOf(filmes.get(i).getPrecoLocacao());
+			BigDecimal percentualDesconto = BigDecimal.valueOf(PercentualDesconto.calculaPercentualDesconto(i+1));
 
+			valorFilmeComDesconto += precoLoc.subtract(precoLoc.multiply(percentualDesconto)).doubleValue();
 		}
+
+		return valorFilmeComDesconto;
 	}
+
+//	public void descontosFilmes(Locacao locacao) {
+//
+//		BigDecimal valorUltimoFilmeDesconto;
+//
+//		for (int i = 0; locacao.getFilmes().size() > i; i++) {
+//
+//			double precoLoc = locacao.getFilmes().get(i).getPrecoLocacao();
+//			valorUltimoFilmeDesconto = BigDecimal.valueOf(precoLoc - (precoLoc * PercentualDesconto.calculaPercentualDesconto(i+1)));
+//			locacao.setValorTotal((locacao.getValor() - precoLoc)+valorUltimoFilmeDesconto.doubleValue());
+//
+//		}
+//	}
 }

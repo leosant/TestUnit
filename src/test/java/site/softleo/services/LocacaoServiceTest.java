@@ -43,10 +43,10 @@ public class LocacaoServiceTest {
         filmes.add(new Filme(" Filme 1", 2, 4.0));
         filmes.add(new Filme(" Filme 2", 3, 4.0));
         filmes.add(new Filme(" Filme 3", 4, 4.0));
-        Locacao locacao = locacaoService.alugarFilme(user, filmes);
 
         //Acao
-        locacaoService.descontoConjuntosFilmes(locacao);
+        Locacao locacao = locacaoService.alugarFilme(user, filmes);
+//        locacaoService.descontosFilmes(locacao);
 
         //Verificacao
         Assert.assertEquals(11.0, locacao.getValor(), 0.001);
@@ -62,10 +62,9 @@ public class LocacaoServiceTest {
         filmes.add(new Filme(" Filme 3", 4, 4.0));
         filmes.add(new Filme(" Filme 4", 1, 4.0));
 
-        Locacao locacao = locacaoService.alugarFilme(user, filmes);
-
         //Acao
-        locacaoService.descontoConjuntosFilmes(locacao);
+        Locacao locacao = locacaoService.alugarFilme(user, filmes);
+//        locacaoService.descontosFilmes(locacao);
 
         //Verificacao
         Assert.assertEquals(13.0, locacao.getValor(), 0.001);
@@ -82,10 +81,9 @@ public class LocacaoServiceTest {
         filmes.add(new Filme(" Filme 4", 1, 4.0));
         filmes.add(new Filme(" Filme 5", 8, 4.0));
 
-        Locacao locacao = locacaoService.alugarFilme(user, filmes);
-
         //Acao
-        locacaoService.descontoConjuntosFilmes(locacao);
+        Locacao locacao = locacaoService.alugarFilme(user, filmes);
+//        locacaoService.descontosFilmes(locacao);
 
         //Verificacao
         Assert.assertEquals(14, locacao.getValor(), 0.001);
@@ -102,10 +100,9 @@ public class LocacaoServiceTest {
         filmes.add(new Filme(" Filme 5", 8, 4.0));
         filmes.add(new Filme(" Filme 6", 5, 4.0));
 
-        Locacao locacao = locacaoService.alugarFilme(user, filmes);
-
         //Acao
-        locacaoService.descontoConjuntosFilmes(locacao);
+        Locacao locacao = locacaoService.alugarFilme(user, filmes);
+//        locacaoService.descontosFilmes(locacao);
 
         //Verificacao
         Assert.assertEquals(14.0, locacao.getValor(), 0.001);
