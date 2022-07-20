@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5d0d298-504e-48d8-8dae-34e1e653f201" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/site/softleo/exceptions/LocacaoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d6953d14fbf9a8af963b5d03dc7bc068e411d600" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/site/softleo/services/LocacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/site/softleo/services/LocacaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/site/softleo/utils/DataUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/site/softleo/utils/DataUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/site/softleo/services/LocacaoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/site/softleo/services/LocacaoServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/site/softleo/services/LocacaoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/site/softleo/services/LocacaoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/site/softleo/utils/DataUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/site/softleo/utils/DataUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/site/softleo/services/LocacaoServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/site/softleo/services/LocacaoServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,9 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
         <option value="JUnit5 &amp; Mockito" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -100,22 +105,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LocacaoServiceTest.shouldDescontoQuatroFilmes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TestesUnitarios" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="site.softleo.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="site.softleo.services" />
-      <option name="MAIN_CLASS_NAME" value="site.softleo.services.LocacaoServiceTest" />
-      <option name="METHOD_NAME" value="shouldDescontoQuatroFilmes" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LocacaoServiceTest.shouldDescontoSeisFilmes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TestesUnitarios" />
       <extension name="coverage">
@@ -148,20 +137,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LocacaoServiceTest.shouldNotDevolverFilmeDomingo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestesUnitarios" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="site.softleo.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="site.softleo.services" />
+      <option name="MAIN_CLASS_NAME" value="site.softleo.services.LocacaoServiceTest" />
+      <option name="METHOD_NAME" value="shouldNotDevolverFilmeDomingo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.LocacaoServiceTest.shouldDescontoCincoFilmes" />
-      <item itemvalue="JUnit.LocacaoServiceTest.shouldDescontoQuatroFilmes" />
       <item itemvalue="JUnit.LocacaoServiceTest.shouldDescontoSeisFilmes" />
       <item itemvalue="JUnit.LocacaoServiceTest.shouldDescontoTresFilmes" />
+      <item itemvalue="JUnit.LocacaoServiceTest.shouldNotDevolverFilmeDomingo" />
       <item itemvalue="JUnit.LocacaoServiceTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LocacaoServiceTest" />
+        <item itemvalue="JUnit.LocacaoServiceTest.shouldNotDevolverFilmeDomingo" />
         <item itemvalue="JUnit.LocacaoServiceTest.shouldDescontoTresFilmes" />
         <item itemvalue="JUnit.LocacaoServiceTest.shouldDescontoSeisFilmes" />
         <item itemvalue="JUnit.LocacaoServiceTest.shouldDescontoCincoFilmes" />
-        <item itemvalue="JUnit.LocacaoServiceTest.shouldDescontoQuatroFilmes" />
       </list>
     </recent_temporary>
   </component>
@@ -186,17 +191,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/site/softleo/services/LocacaoService.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TestesUnitarios$LocacaoService_teste.ic" NAME="LocacaoService.teste Coverage Results" MODIFIED="1657896077932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

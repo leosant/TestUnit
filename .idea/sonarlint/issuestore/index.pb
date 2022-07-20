@@ -1,8 +1,6 @@
 
 _
 /src/main/java/site/softleo/domains/Usuario.java,1/9/191a1005ca9345ca40b3ea10e6c7a4f4d1501d26
-_
-/src/main/java/site/softleo/utils/DataUtils.java,d/6/d6953d14fbf9a8af963b5d03dc7bc068e411d600
 `
 0src/test/java/site/softleo/utils/AssertTest.java,7/8/783e5d05341798387e59e334000b83b747e5dca9
 ]
@@ -13,3 +11,13 @@ _
 src/.gitignore,9/3/93cbdd0973c9a7b59e5cef90a94300ab95fd66e5
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+o
+?src/main/java/site/softleo/exceptions/DivideErrorException.java,a/f/af461493cd7ef0c688c89f49ad35a924fb844369
+h
+8src/test/java/site/softleo/services/CalculadoraTest.java,5/d/5dd665190dec44b17dc033e93195a2af46841166
+d
+4src/main/java/site/softleo/services/Calculadora.java,9/f/9fe4dd87a7232f321619290b6b28f4787177d155
+h
+8src/main/java/site/softleo/enums/PercentualDesconto.java,f/2/f2eb707025a56e11175ead797aca4d56fda70677
+k
+;src/main/java/site/softleo/exceptions/LocacaoException.java,7/1/710fdf4c989b7d61ed1b3a14f4ba4764ec13a824

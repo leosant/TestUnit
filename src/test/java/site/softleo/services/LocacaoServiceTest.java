@@ -7,9 +7,11 @@ import org.junit.runners.MethodSorters;
 import site.softleo.domains.Filme;
 import site.softleo.domains.Locacao;
 import site.softleo.domains.Usuario;
+import site.softleo.exceptions.LocacaoException;
 import site.softleo.utils.DataUtils;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -35,9 +37,24 @@ public class LocacaoServiceTest {
         filmes = new ArrayList<>();
     }
 
+    @Test
+    public void shouldNotDevolverFilmeDomingo() throws LocacaoException {
+        //Cenario
+        Usuario user = new Usuario("Usuario 1");
+        filmes.add(new Filme(" Filme 1", 2, 4.0));
+
+        //Acao
+        Locacao locacao = locacaoService.alugarFilme(user, filmes);
+
+        //Verificacao
+        boolean isSunday = DataUtils.verificarDiaSemana(locacao.getDataRetorno(), Calendar.SUNDAY);
+        assertFalse(isSunday);
+    }
+
     //Caso o usuário queira compra até tres filmes deve ocorrer um desconto de 25%
     @Test
-    public void shouldDescontoTresFilmes() throws Exception {
+    @Ignore
+    public void shouldDescontoTresFilmes() throws LocacaoException {
         //Cenario
         Usuario user = new Usuario("Usuario 1");
         filmes.add(new Filme(" Filme 1", 2, 4.0));
@@ -54,7 +71,10 @@ public class LocacaoServiceTest {
 
     //Caso o usuário queira compra até quatro filmes deve ocorrer um desconto de 50%
     @Test
-    public void shouldDescontoQuatroFilmes() throws Exception {
+    public void shouldDescontoQuatroFilmes() throws LocacaoException {
+
+//        Assume.assumeFalse();
+
         //Cenario
         Usuario user = new Usuario("Usuario 1");
         filmes.add(new Filme(" Filme 1", 2, 4.0));
@@ -72,7 +92,7 @@ public class LocacaoServiceTest {
 
     //Caso o usuário queira compra até cinco filmes deve ocorrer um desconto de 75%
     @Test
-    public void shouldDescontoCincoFilmes() throws Exception {
+    public void shouldDescontoCincoFilmes() throws LocacaoException {
         //Cenario
         Usuario user = new Usuario("Usuario 1");
         filmes.add(new Filme(" Filme 1", 2, 4.0));
@@ -88,9 +108,10 @@ public class LocacaoServiceTest {
         //Verificacao
         Assert.assertEquals(14, locacao.getValor(), 0.001);
     }
+
     //Caso o usuário queira compra até seis filmes deve ocorrer um desconto de 100%
     @Test
-    public void shouldDescontoSeisFilmes() throws Exception {
+    public void shouldDescontoSeisFilmes() throws LocacaoException {
         //Cenario
         Usuario user = new Usuario("Usuario 1");
         filmes.add(new Filme(" Filme 1", 2, 4.0));
@@ -110,7 +131,7 @@ public class LocacaoServiceTest {
 
 
     @Test
-    public void shouldAlugarFilme() throws Exception {
+    public void shouldAlugarFilme() throws LocacaoException {
 
         Usuario user = new Usuario("Usuario 1");
         filmes.add(new Filme(" Filme 1", 2, 5.0));
@@ -127,7 +148,7 @@ public class LocacaoServiceTest {
     }
 
     @Test(expected = Exception.class)
-    public void shouldExpectedExceptionFilmeSemEstoque() throws Exception {
+    public void shouldExpectedExceptionFilmeSemEstoque() throws LocacaoException {
 
         Usuario user = new Usuario("Usuario 1");
         filmes.add(new Filme(" Filme 1", 0, 5.0));
@@ -139,8 +160,7 @@ public class LocacaoServiceTest {
     @Test
     public void shouldBlockCodeFilmeSemEstoque() {
 
-        //A melhor é essa
-
+        //A melhor solucao é essa
         Usuario user = new Usuario("Usuario 1");
         filmes.add(new Filme(" Filme 1", 0, 5.0));
 
@@ -153,22 +173,4 @@ public class LocacaoServiceTest {
 
     }
 
-//    @Test
-//    public void testeLocacao_filmeEstoque3() throws Exception {
-//
-//        LocacaoService ls = new LocacaoService();
-//
-//        Usuario user = new Usuario("Usuario 1");
-//        Filme filme = new Filme(" Filme 1", 0, 5.0);
-//
-//        expectedException.expect(Exception.class);
-//        expectedException.expectMessage("Filme sem estoque");
-////        expectedException.expectMessage("Filme sem estoque");
-//
-//        if (expectedException.isAnyExceptionExpected()) {
-//            Locacao locacao = ls.alugarFilme(user, filme);
-//            assertTrue(true);
-//        }
-//
-//    }
 }

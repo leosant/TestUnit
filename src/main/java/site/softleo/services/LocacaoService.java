@@ -4,10 +4,12 @@ import site.softleo.domains.Filme;
 import site.softleo.domains.Locacao;
 import site.softleo.domains.Usuario;
 import site.softleo.enums.PercentualDesconto;
+import site.softleo.exceptions.LocacaoException;
 import site.softleo.utils.DataUtils;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -15,7 +17,7 @@ import static java.lang.String.format;
 
 public class LocacaoService {
 	
-	public Locacao alugarFilme(Usuario usuario, List<Filme> filmes) throws Exception {
+	public Locacao alugarFilme(Usuario usuario, List<Filme> filmes) throws LocacaoException {
 
 		List<String> erros = new ArrayList<>();
 
@@ -29,7 +31,7 @@ public class LocacaoService {
 		}
 
 		if (!erros.isEmpty()) {
-			throw new Exception(erros.toString());
+			throw new LocacaoException(erros.toString());
 		}
 
 		double precoTotal = descontosFilmes(filmes);
@@ -42,7 +44,11 @@ public class LocacaoService {
 
 		//Entrega no dia seguinte
 		Date dataEntrega = new Date();
-		dataEntrega = DataUtils.adicionarDias(dataEntrega, 1);
+		dataEntrega = DataUtils.adicionarDias(dataEntrega, 0);
+		if (DataUtils.verificarDiaSemana(dataEntrega, Calendar.SUNDAY)) {
+			dataEntrega = DataUtils.adicionarDias(dataEntrega, 1);
+		}
+
 		locacao.setDataRetorno(dataEntrega);
 		
 		//Salvando a locacao...
@@ -64,17 +70,4 @@ public class LocacaoService {
 
 		return valorFilmeComDesconto;
 	}
-
-//	public void descontosFilmes(Locacao locacao) {
-//
-//		BigDecimal valorUltimoFilmeDesconto;
-//
-//		for (int i = 0; locacao.getFilmes().size() > i; i++) {
-//
-//			double precoLoc = locacao.getFilmes().get(i).getPrecoLocacao();
-//			valorUltimoFilmeDesconto = BigDecimal.valueOf(precoLoc - (precoLoc * PercentualDesconto.calculaPercentualDesconto(i+1)));
-//			locacao.setValorTotal((locacao.getValor() - precoLoc)+valorUltimoFilmeDesconto.doubleValue());
-//
-//		}
-//	}
 }
