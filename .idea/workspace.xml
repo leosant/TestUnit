@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5d0d298-504e-48d8-8dae-34e1e653f201" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/site/softleo/exceptions/LocacaoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d6953d14fbf9a8af963b5d03dc7bc068e411d600" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/site/softleo/services/LocacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/site/softleo/services/LocacaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/site/softleo/utils/DataUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/site/softleo/utils/DataUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/site/softleo/services/LocacaoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/site/softleo/services/LocacaoServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/site/softleo/services/LocacaoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/site/softleo/services/LocacaoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/site/softleo/utils/DataUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/site/softleo/utils/DataUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/site/softleo/services/LocacaoServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/site/softleo/services/LocacaoServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +46,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_directory_selection": "/home/leonardo/personal/projects/back/TestesUnitarios+-+inicio/TestesUnitarios/src/main/java/site/softleo/services",
-    "last_opened_file_path": "/home/leonardo/keeggo/projects/backend/fast/seller-api-pedido",
+    "last_opened_file_path": "/home/leonardo/keeggo/projects/backend/config_default/seller-api-produto",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
