@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5d0d298-504e-48d8-8dae-34e1e653f201" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/site/softleo/services/calcularValorAluguel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5dd665190dec44b17dc033e93195a2af46841166" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/2/f2eb707025a56e11175ead797aca4d56fda70677" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/site/softleo/enums/PercentualDesconto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/site/softleo/enums/PercentualDesconto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/site/softleo/services/LocacaoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/site/softleo/services/LocacaoServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/site/softleo/enums/PercentualDesconto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/site/softleo/enums/PercentualDesconto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/site/softleo/services/LocacaoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/site/softleo/services/LocacaoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/site/softleo/services/LocacaoServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/site/softleo/services/LocacaoServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,18 +50,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_directory_selection": "/home/leonardo/personal/projects/back/TestesUnitarios+-+inicio/TestesUnitarios/src/main/java/site/softleo/services",
-    "last_opened_file_path": "/home/leonardo/keeggo/projects/backend/config_default/seller-api-produto",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Project.color&quot;: &quot;2f3416&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/home/leonardo/personal/projects/back/TestesUnitarios+-+inicio/TestesUnitarios/src/main/java/site/softleo/services&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/leonardo/personal/projects/back/TestesUnitarios+-+inicio/TestesUnitarios&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="site.softleo.services" />
@@ -64,7 +74,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LocacaoServiceTest">
+  <component name="RunManager" selected="JUnit.calcularValorAluguel.shouldCalcDescontoFilmes">
     <configuration name="LocacaoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TestesUnitarios" />
       <extension name="coverage">
@@ -76,38 +86,6 @@
       <option name="PACKAGE_NAME" value="site.softleo.services" />
       <option name="MAIN_CLASS_NAME" value="site.softleo.services.LocacaoServiceTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LocacaoServiceTest.shouldDescontoCincoFilmes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TestesUnitarios" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="site.softleo.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="site.softleo.services" />
-      <option name="MAIN_CLASS_NAME" value="site.softleo.services.LocacaoServiceTest" />
-      <option name="METHOD_NAME" value="shouldDescontoCincoFilmes" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LocacaoServiceTest.shouldDescontoSeisFilmes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TestesUnitarios" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="site.softleo.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="site.softleo.services" />
-      <option name="MAIN_CLASS_NAME" value="site.softleo.services.LocacaoServiceTest" />
-      <option name="METHOD_NAME" value="shouldDescontoSeisFilmes" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,20 +122,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="calcularValorAluguel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestesUnitarios" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="site.softleo.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="site.softleo.services" />
+      <option name="MAIN_CLASS_NAME" value="site.softleo.services.calcularValorAluguel" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="calcularValorAluguel.shouldCalcDescontoFilmes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestesUnitarios" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="site.softleo.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="site.softleo.services" />
+      <option name="MAIN_CLASS_NAME" value="site.softleo.services.calcularValorAluguel" />
+      <option name="METHOD_NAME" value="shouldCalcDescontoFilmes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.LocacaoServiceTest.shouldDescontoCincoFilmes" />
-      <item itemvalue="JUnit.LocacaoServiceTest.shouldDescontoSeisFilmes" />
+      <item itemvalue="JUnit.calcularValorAluguel" />
+      <item itemvalue="JUnit.calcularValorAluguel.shouldCalcDescontoFilmes" />
       <item itemvalue="JUnit.LocacaoServiceTest.shouldDescontoTresFilmes" />
       <item itemvalue="JUnit.LocacaoServiceTest.shouldNotDevolverFilmeDomingo" />
       <item itemvalue="JUnit.LocacaoServiceTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LocacaoServiceTest" />
+        <item itemvalue="JUnit.calcularValorAluguel.shouldCalcDescontoFilmes" />
+        <item itemvalue="JUnit.calcularValorAluguel" />
         <item itemvalue="JUnit.LocacaoServiceTest.shouldNotDevolverFilmeDomingo" />
+        <item itemvalue="JUnit.LocacaoServiceTest" />
         <item itemvalue="JUnit.LocacaoServiceTest.shouldDescontoTresFilmes" />
-        <item itemvalue="JUnit.LocacaoServiceTest.shouldDescontoSeisFilmes" />
-        <item itemvalue="JUnit.LocacaoServiceTest.shouldDescontoCincoFilmes" />
       </list>
     </recent_temporary>
   </component>

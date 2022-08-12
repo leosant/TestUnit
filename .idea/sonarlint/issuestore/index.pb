@@ -13,11 +13,7 @@ _
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 o
 ?src/main/java/site/softleo/exceptions/DivideErrorException.java,a/f/af461493cd7ef0c688c89f49ad35a924fb844369
-h
-8src/test/java/site/softleo/services/CalculadoraTest.java,5/d/5dd665190dec44b17dc033e93195a2af46841166
 d
 4src/main/java/site/softleo/services/Calculadora.java,9/f/9fe4dd87a7232f321619290b6b28f4787177d155
-h
-8src/main/java/site/softleo/enums/PercentualDesconto.java,f/2/f2eb707025a56e11175ead797aca4d56fda70677
 k
 ;src/main/java/site/softleo/exceptions/LocacaoException.java,7/1/710fdf4c989b7d61ed1b3a14f4ba4764ec13a824

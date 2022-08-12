@@ -1,10 +1,5 @@
 package site.softleo.enums;
 
-import site.softleo.domains.Filme;
-import site.softleo.domains.Locacao;
-
-import java.math.BigDecimal;
-
 public enum PercentualDesconto {
 
     DESC25(3,
