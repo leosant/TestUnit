@@ -8,6 +8,8 @@ import site.softleo.domains.Filme;
 import site.softleo.domains.Locacao;
 import site.softleo.domains.Usuario;
 import site.softleo.exceptions.LocacaoException;
+import site.softleo.matchers.DiaSemanaMatcher;
+import site.softleo.matchers.MatchersProprios;
 import site.softleo.utils.DataUtils;
 
 import java.util.ArrayList;
@@ -49,6 +51,9 @@ public class LocacaoServiceTest {
         //Verificacao
         boolean isSunday = DataUtils.verificarDiaSemana(locacao.getDataRetorno(), Calendar.SUNDAY);
         assertFalse(isSunday);
+        assertThat(locacao.getDataRetorno(), MatchersProprios.caiEm(Calendar.MONDAY));
+        assertThat(locacao.getDataRetorno(), MatchersProprios.caiNumaTerca());
+
     }
 
     @Test
